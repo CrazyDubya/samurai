@@ -491,7 +491,7 @@ class SamuraiWebDemo:
                 return {'success': False, 'error': result.stderr or 'Unknown error'}
                 
         except subprocess.TimeoutExpired:
-            return {'success': False, 'error': 'Demo timeout (30s limit exceeded)'}
+            return {'success': False, 'error': 'Demo execution timed out after 30 seconds. This may indicate a complex scenario or system performance issues. Try running a simpler scenario or check system resources.'}
         except Exception as e:
             return {'success': False, 'error': str(e)}
     
