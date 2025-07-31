@@ -97,11 +97,15 @@ class SamuraiSetup:
             try:
                 self.log(f"Installing {package}...")
                 result = subprocess.run([
-                    sys.executable, "-m", "pip", "install", package, "--user"
+                    sys.executable, "-m", "pip", "install", package
                 ], capture_output=True, text=True, timeout=120)
                 
                 if result.returncode == 0:
-                    self.log(f"{package} installed successfully", "SUCCESS")
+                    try:
+                        __import__(package)
+                        self.log(f"{package} installed and importable", "SUCCESS")
+                    except ImportError:
+                        self.log(f"{package} installed but not importable", "WARNING")
                 else:
                     self.log(f"Failed to install {package}: {result.stderr}", "WARNING")
                     
