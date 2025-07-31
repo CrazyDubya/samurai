@@ -458,12 +458,17 @@ class SamuraiWebDemo:
             import subprocess
             import tempfile
             
+            # Validate the scenario parameter
+            allowed_scenarios = {'all', 'single', 'multiple', 'complex'}
+            if scenario not in allowed_scenarios:
+                return {'success': False, 'error': f"Invalid scenario: {scenario}"}
+            
             # Run the simple demo script
             result = subprocess.run([
                 'python3', 'simple_demo.py', 
                 '--scenario', scenario,
                 '--output_dir', 'web_demo_output'
-            ], capture_output=True, text=True, timeout=30)
+            ], capture_output=True, text=True, timeout=30, shell=False)
             
             if result.returncode == 0:
                 # Try to load results
