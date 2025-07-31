@@ -183,7 +183,7 @@ class SimpleSamuraiDemo:
             
             # Simulate occasional occlusion
             if frame_idx % self.OCCLUSION_CHECK_INTERVAL == 0:
-                obj["visible"] = random.choice([True, True, True, False])  # 25% chance of occlusion
+                obj["visible"] = random.random() > OCCLUSION_PROBABILITY  # 25% chance of occlusion
             elif frame_idx % self.OCCLUSION_CHECK_INTERVAL == 10:
                 obj["visible"] = True  # Reappear after occlusion
         
