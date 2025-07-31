@@ -1,3 +1,13 @@
+# Enhanced demo outputs and temporary files
+demo_output/
+benchmark_results/
+web_demo_output/
+sample_data/
+benchmark_temp_*/
+setup_report.json
+SETUP_REPORT.txt
+launch_demos.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

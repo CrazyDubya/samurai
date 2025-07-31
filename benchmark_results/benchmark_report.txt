@@ -1,0 +1,51 @@
+SAMURAI Performance Benchmark Report
+==================================================
+
+Execution Date: 2025-07-31 04:04:24
+Total Execution Time: 0.16 seconds
+Runs per Configuration: 1
+Parallel Execution: False
+
+SUMMARY
+--------------------
+Overall Grade: A (Very Good)
+Success Rate: 75.0%
+Average FPS: 107335.2
+Average Quality: 0.805
+
+DETAILED RESULTS
+--------------------
+
+Configuration: Single Object - Simple Motion
+Description: Basic single object tracking with linear motion
+Success Rate: 100.0%
+Average FPS: 175493.9 ± 0.0
+Tracking Quality: 0.860 ± 0.000
+Execution Time: 0.04s
+Memory Usage: 114.9 MB
+Meets FPS Expectation (100): Yes
+Meets Quality Expectation (0.9): No
+
+Configuration: Multiple Objects - Medium Complexity
+Description: Multiple object tracking with moderate motion complexity
+Success Rate: 100.0%
+Average FPS: 90943.3 ± 0.0
+Tracking Quality: 0.857 ± 0.000
+Execution Time: 0.04s
+Memory Usage: 115.0 MB
+Meets FPS Expectation (60): Yes
+Meets Quality Expectation (0.8): Yes
+
+Configuration: Complex Motion - High Difficulty
+Description: Challenging scenarios with occlusion and complex motion
+Success Rate: 100.0%
+Average FPS: 55568.4 ± 0.0
+Tracking Quality: 0.697 ± 0.000
+Execution Time: 0.04s
+Memory Usage: 115.0 MB
+Meets FPS Expectation (30): Yes
+Meets Quality Expectation (0.7): No
+
+Configuration: Stress Test - Maximum Load
+Description: Extreme stress testing with maximum object count and complexity
+Success Rate: 0.0%
