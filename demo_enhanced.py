@@ -161,7 +161,7 @@ class SamuraiDemo:
             # Add scale changes and occasional occlusion
             obj['x'] += obj['velocity_x']
             obj['y'] += obj['velocity_y']
-            obj['size'] = max(10, obj['size'] + np.random.uniform(-2, 2))
+            obj['size'] = max(MIN_OBJECT_SIZE, obj['size'] + np.random.uniform(-SCALE_CHANGE_RANGE, SCALE_CHANGE_RANGE))
             
         # Bounce off walls
         if obj['x'] <= 0 or obj['x'] >= width - obj['size']:
