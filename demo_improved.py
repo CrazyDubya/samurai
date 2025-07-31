@@ -200,8 +200,8 @@ def simulate_tracking_results(prompts: Dict, num_frames: int, width: int, height
     
     for frame_idx in range(num_frames):
         # Update position with simple motion model
-        obj_x += velocity_x + np.random.normal(0, 1)
-        obj_y += velocity_y + np.random.normal(0, 1)
+        obj_x += velocity_x + np.random.normal(MOTION_NOISE_MEAN, MOTION_NOISE_STD)
+        obj_y += velocity_y + np.random.normal(MOTION_NOISE_MEAN, MOTION_NOISE_STD)
         
         # Bounce off walls
         if obj_x <= 0 or obj_x >= width - obj_w:
