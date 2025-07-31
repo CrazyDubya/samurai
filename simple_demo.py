@@ -182,9 +182,9 @@ class SimpleSamuraiDemo:
             obj["position"]["y"] += 2 * math.cos(frame_idx * 0.15)
             
             # Simulate occasional occlusion
-            if frame_idx % 30 == 0:
+            if frame_idx % self.OCCLUSION_CHECK_INTERVAL == 0:
                 obj["visible"] = random.choice([True, True, True, False])  # 25% chance of occlusion
-            elif frame_idx % 30 == 10:
+            elif frame_idx % self.OCCLUSION_CHECK_INTERVAL == 10:
                 obj["visible"] = True  # Reappear after occlusion
         
         # Boundary checking (bounce off walls)
