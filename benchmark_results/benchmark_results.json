@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-31 04:01:00",
+    "num_runs_per_config": 1,
+    "parallel_execution": false,
+    "total_configurations": 4,
+    "total_execution_time": 0.15579605102539062
+  },
+  "configurations": [
+    {
+      "config": {
+        "name": "Single Object - Simple Motion",
+        "scenario": "single",
+        "complexity": "simple",
+        "expected_fps": 100,
+        "expected_quality": 0.9,
+        "description": "Basic single object tracking with linear motion"
+      },
+      "success_rate": 1.0,
+      "total_runs": 1,
+      "successful_runs": 1,
+      "performance": {
+        "fps": {
+          "mean": 196301.27925117005,
+          "median": 196301.27925117005,
+          "std": 0,
+          "min": 196301.27925117005,
+          "max": 196301.27925117005
+        },
+        "tracking_quality": {
+          "mean": 0.9007203261149331,
+          "median": 0.9007203261149331,
+          "std": 0,
+          "min": 0.9007203261149331,
+          "max": 0.9007203261149331
+        },
+        "execution_time": {
+          "mean": 0.03566741943359375,
+          "median": 0.03566741943359375,
+          "std": 0,
+          "min": 0.03566741943359375,
+          "max": 0.03566741943359375
+        },
+        "memory_usage": {
+          "mean": 110.3816647529602,
+          "max": 110.3816647529602
+        }
+      },
+      "meets_expectations": {
+        "fps": true,
+        "quality": true
+      },
+      "errors": []
+    },
+    {
+      "config": {
+        "name": "Multiple Objects - Medium Complexity",
+        "scenario": "multiple",
+        "complexity": "medium",
+        "expected_fps": 60,
+        "expected_quality": 0.8,
+        "description": "Multiple object tracking with moderate motion complexity"
+      },
+      "success_rate": 1.0,
+      "total_runs": 1,
+      "successful_runs": 1,
+      "performance": {
+        "fps": {
+          "mean": 97541.95348837209,
+          "median": 97541.95348837209,
+          "std": 0,
+          "min": 97541.95348837209,
+          "max": 97541.95348837209
+        },
+        "tracking_quality": {
+          "mean": 0.8564131701552359,
+          "median": 0.8564131701552359,
+          "std": 0,
+          "min": 0.8564131701552359,
+          "max": 0.8564131701552359
+        },
+        "execution_time": {
+          "mean": 0.037415504455566406,
+          "median": 0.037415504455566406,
+          "std": 0,
+          "min": 0.037415504455566406,
+          "max": 0.037415504455566406
+        },
+        "memory_usage": {
+          "mean": 110.42033386230469,
+          "max": 110.42033386230469
+        }
+      },
+      "meets_expectations": {
+        "fps": true,
+        "quality": true
+      },
+      "errors": []
+    },
+    {
+      "config": {
+        "name": "Complex Motion - High Difficulty",
+        "scenario": "complex",
+        "complexity": "high",
+        "expected_fps": 30,
+        "expected_quality": 0.7,
+        "description": "Challenging scenarios with occlusion and complex motion"
+      },
+      "success_rate": 1.0,
+      "total_runs": 1,
+      "successful_runs": 1,
+      "performance": {
+        "fps": {
+          "mean": 56006.1957537722,
+          "median": 56006.1957537722,
+          "std": 0,
+          "min": 56006.1957537722,
+          "max": 56006.1957537722
+        },
+        "tracking_quality": {
+          "mean": 0.6970855525090659,
+          "median": 0.6970855525090659,
+          "std": 0,
+          "min": 0.6970855525090659,
+          "max": 0.6970855525090659
+        },
+        "execution_time": {
+          "mean": 0.04392409324645996,
+          "median": 0.04392409324645996,
+          "std": 0,
+          "min": 0.04392409324645996,
+          "max": 0.04392409324645996
+        },
+        "memory_usage": {
+          "mean": 110.46659398078918,
+          "max": 110.46659398078918
+        }
+      },
+      "meets_expectations": {
+        "fps": true,
+        "quality": false
+      },
+      "errors": []
+    },
+    {
+      "config": {
+        "name": "Stress Test - Maximum Load",
+        "scenario": "stress",
+        "complexity": "extreme",
+        "expected_fps": 15,
+        "expected_quality": 0.6,
+        "description": "Extreme stress testing with maximum object count and complexity"
+      },
+      "success_rate": 0,
+      "error": "All runs failed",
+      "failed_runs": 1
+    }
+  ],
+  "summary": {
+    "overall_success": true,
+    "configurations_tested": 4,
+    "successful_configurations": 3,
+    "success_rate": 0.75,
+    "performance": {
+      "average_fps": 116616.47616443812,
+      "average_quality": 0.8180730162597449,
+      "fps_range": [
+        56006.1957537722,
+        196301.27925117005
+      ],
+      "quality_range": [
+        0.6970855525090659,
+        0.9007203261149331
+      ]
+    },
+    "expectations": {
+      "fps_expectations_met": 3,
+      "quality_expectations_met": 2,
+      "total_expectations": 8
+    },
+    "grade": "A+ (Excellent)"
+  }
+}
