@@ -24,6 +24,7 @@ https://github.com/user-attachments/assets/9d368ca7-2e9b-4fed-9da0-d2efbf620d88
 All rights are reserved to the copyright owners (TM & © Universal (2019)). This clip is not intended for commercial use and is solely for academic demonstration in a research paper. Original source can be found [here](https://www.youtube.com/watch?v=cwUzUzpG8aM&t=4s).
 
 ## News
+- [x] **2025/07/31**: 🎉 **NEW!** Enhanced Demo Suite with web interface, benchmarking, and zero-dependency demos!
 - [ ] **Incoming**: Support vot-challenge toolkit intergration.
 - [ ] **Incoming**: Release demo script to support inference on video (with mask prompt).
 - [x] **2025/02/18**: Release multi-GPU inference script.
@@ -86,11 +87,52 @@ data/LaSOT
 python scripts/main_inference.py 
 ```
 
+## 🚀 Enhanced Demo Suite (NEW!)
+
+We've added a comprehensive enhanced demo suite that works without requiring full SAMURAI installation! Perfect for testing, development, and demonstrations.
+
+### Quick Start - No Installation Required
+```bash
+# Automated setup and optimization
+python setup_environment.py
+
+# Interactive demo launcher
+python launch_demos.py
+
+# Or run individual demos
+python simple_demo.py                    # Standalone interactive demo
+python web_demo.py                      # Web-based interface  
+python benchmark_suite.py              # Performance benchmarking
+```
+
+### 🌟 Enhanced Features
+- **Zero-dependency demos** that work without SAM 2 installation
+- **Interactive web interface** accessible via browser
+- **Comprehensive benchmarking** with performance analysis
+- **Automated environment setup** and optimization
+- **Multiple tracking scenarios** (single, multiple, complex motion)
+- **Real-time visualization** and progress tracking
+
+### 📖 Enhanced Documentation
+See [ENHANCED_DEMO_README.md](ENHANCED_DEMO_README.md) for complete documentation of the new demo suite.
+
 ## Demo on Custom Video
 
 To run the demo with your custom video or frame directory, use the following examples:
 
 **Note:** The `.txt` file contains a single line with the bounding box of the first frame in `x,y,w,h` format while the SAM 2 takes `x1,y1,x2,y2` format as bbox input.
+
+### Enhanced Demo (Recommended)
+```bash
+# Use the improved demo with better error handling
+python demo_improved.py --video_path <your_video.mp4> --txt_path <path_to_first_frame_bbox.txt>
+```
+
+### Original Demo
+```bash
+# Original demo script
+python scripts/demo.py --video_path <your_video.mp4> --txt_path <path_to_first_frame_bbox.txt>
+```
 
 ### Input is Video File
 
