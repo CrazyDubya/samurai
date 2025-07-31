@@ -695,6 +695,7 @@
   "performance": {
     "processing_time": 0.0001811981201171875,
     "fps": 165564.63157894736,
+    "fps_source": "simulation",
     "frames_processed": 30,
     "objects_tracked": 1
   },
